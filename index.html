@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieSearchApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <script src="app.js"></script>
+  <script src="services/movieSearch.js"></script>
+  <base href="/">
+</head>
+<body ng-controller="MovieSearchController">
+  <div id="content" class="container-fluid">
+    <div class="row page-header">
+      <h1 class="col-md-5 col-md-offset-4 ">Angular OMDB API Search</h1>
+      <div class="col-md-5 col-md-offset-4">
+        <form ng-submit="getMovies(searchTitle)">
+          Enter a movie by title:
+          <input type="text" ng-model="searchTitle">
+          <input type="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+    <div ng-view></div>
+
+  </div><!-- contianer end -->
+</body>
+</html>

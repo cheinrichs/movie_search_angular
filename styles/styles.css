@@ -1,0 +1,13 @@
+.searchMovies{
+  font-family: 'Cabin', sans-serif;
+  color: #2D90D6;
+}
+
+h2{
+  margin: 0px;
+  font-size: 25px;
+}
+
+.pointer {
+  cursor: pointer;
+}
